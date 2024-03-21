@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stěhování pro lidi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="style.css"/> 
+  <script src="https://kit.fontawesome.com/8ba26cb1dc.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="brand-name display-6" href="#">MOVERS, s. r. o.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse row" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item px-3 mx-auto">
+                    <a class="nav-link" href="#">Galerie</a>
+                </li>
+                <li class="nav-item px-3 mx-auto">
+                    <a class="nav-link" href="#">O nás</a>
+                </li>
+                <li class="nav-item px-3 mx-auto">
+                    <a class="nav-link" href="#">Kontakt</a>
+                </li>
+            </ul>
+            <button class="btn btn-light ms-auto darkModeBtn" onclick="toggleMode()"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </div>
+</nav>
+    <section class="Galery">
+    <div class="galery-text text-center mt-3">
+    <h2> Galerie </h2>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="https://images.pexels.com/photos/6407535/pexels-photo-6407535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1" class="thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="image1.jpg">
+        </div>
+        <div class="col-md-4 text-center mt-">
+            <img src="https://images.unsplash.com/photo-1520038410233-7141be7e6f97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vdmVyc3xlbnwwfHwwfHx8Mg%3D%3D" alt="Image 2" class="thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="image2.jpg">
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="https://images.pexels.com/photos/4247766/pexels-photo-4247766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3" class="thumbnail-img" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="image3.jpg">
+        </div>
+    </div>
+</div>
+    </section>
+<br/>
+    <h2 class="o-nas text-center mt-3"> O nás </h2>
+    <div class="o-nas-text mx-auto mt-3">
+    <div>
+      Vítejte v naší stěhovací firmě, kde rozumíme potřebám každého zákazníka. S naším týmem zkušených profesionálů a moderním vybavením jsme připraveni zajistit pohodlný přesun vašeho majetku kamkoliv potřebujete. Bez ohledu na rozsah a složitost stěhování se postaráme o každý detail, abyste se mohli soustředit na své nové začátky.</div>
+
+<div>Naše firma klade důraz na kvalitu služeb a spokojenost zákazníka. S individuálním přístupem a pečlivým plánováním každého přesunu jsme tu pro vás od začátku až do konce. Bezpečnost a spolehlivost jsou pro nás prioritou, a proto se můžete spolehnout na nás v každém kroku vašeho stěhování.</div>
+
+<div>S námi můžete být klidní, protože víme, jak důležité je vaše majetku. S našimi profesionálními stěhováky, kteří mají bohaté zkušenosti v oboru, se váš přesun stane hladkým a bezstarostným procesem. Stačí se posadit, relaxovat a nechat nás postarat se o všechno ostatní.</div>
+
+<div>Kromě standardních stěhovacích služeb nabízíme také balení, skladování a montáž nábytku. S kompletním sortimentem služeb jsme tu pro vás, abychom zajistili, že váš přesun bude probíhat podle vašich představ a bez problémů.</div>
+
+<div>Nezáleží na tom, zda se stěhujete do nového domova, kanceláře nebo podniku, naše firma má řešení pro všechny vaše potřeby. Kontaktujte nás ještě dnes a začněte svou stěhovací cestu s profesionály, na které se můžete spolehnout."
+    </div></div>
+    
+    <h2 class="kontakt text-center mt-3">Kontakt</h2>
+  
+        <div class="col-md-5 mx-auto">
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="password1" class="form-label">Heslo:</label>
+                    <input type="password" class="form-control" id="password1" name="password1">
+                </div>
+                <div class="mb-3">
+                    <label for="password2" class="form-label">Potvrďe heslo:</label>
+                    <input type="password" class="form-control" id="password2" name="password2" oninput="checkPassword()">
+                    <div id="passwordError" class="form-text" style="color: red; display: none;">Hesla se neshodují.</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <div class="kontakt-text mx-auto mb-5"> *Můžete nás kontaktovat pomocí telefonu na čísle +420 777 666 555 každý den od 9:00 do 21:00, či přímo na naší stránce a to po přihlášení. </div>
+<button id="backToTopBtn" onclick="scrollToTop()">
+    <img src="https://pic.onlinewebfonts.com/thumbnails/icons_309002.svg" alt="Back to Top">
+</button>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <p class="text-center text-white">&copy; 2024 My Website</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
